@@ -17,9 +17,15 @@ const MainContext = (props) => {
 
   const handleClick = (e) => {
     setFilter(e.target.value);
+    if (input) {
+      setInput("");
+    }
   };
   const handleChange = (e) => {
     setInput(e.target.value);
+    if (filter) {
+      setFilter("");
+    }
   };
 
   if (data) {

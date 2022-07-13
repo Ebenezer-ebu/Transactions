@@ -12,15 +12,22 @@ const Main = () => {
     data = searchInput(input, data);
   }
   const formatdata = groupData(data);
+  console.log(formatdata);
   return (
     <div>
       <div>
-        {formatdata.map((data, ind) => (
-          <React.Fragment key={ind}>
-            <div>{`${new Date(data.date.slice(0, -1))}`}</div>
-            <List details={data.details} />
-          </React.Fragment>
-        ))}
+        {formatdata.length > 0 ? (
+          formatdata.map((data, ind) => (
+            <div key={ind} className="sect">
+              <div className="date">{`${new Date(
+                data.date.slice(0, -1)
+              )}`}</div>
+              <List details={data.details} />
+            </div>
+          ))
+        ) : (
+          <div className="no-data">No data to deplay from your search...</div>
+        )}
       </div>
     </div>
   );

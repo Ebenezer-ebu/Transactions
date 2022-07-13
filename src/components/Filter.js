@@ -2,11 +2,18 @@ import { useContext } from "react";
 import { myContext } from "./Context";
 
 const Filter = () => {
-  const { filterList, handleClick } = useContext(myContext);
+  const { filterList, handleClick, filter } = useContext(myContext);
+  console.log(filter);
   return (
     <div className="filter-content">
-      {filterList.map((filter, ind) => (
-        <input key={ind} value={filter} type="button" onClick={handleClick} />
+      {filterList.map((filtered, ind) => (
+        <input
+          key={ind}
+          value={filtered}
+          type="button"
+          id={filter === filtered ? "active" : ""}
+          onClick={handleClick}
+        />
       ))}
     </div>
   );
