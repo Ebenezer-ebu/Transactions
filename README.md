@@ -32,3 +32,7 @@ To start application on browser run the command:
 ```
 npm start
 ```
+
+View Image of application
+![Display 1](https://github.com/Ebenezer-ebu/Transactions/blob/main/src/images/my-app.png?raw=true)
+![Display 2](https://github.com/Ebenezer-ebu/Transactions/blob/main/src/images/my-app2.png?raw=true)
