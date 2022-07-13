@@ -17,9 +17,9 @@ graphql-faker --open
 This will enable mocking and saving the schema i desire to use.
 
 ## Some decisions
-I used react context to manage state to avoid prop drilling in the application.
-When searching from the input i reset the state of my filter and vice versa. 
-I enabled search for all fields which are; Name, Status and Type.
+* I used react context to manage state to avoid prop drilling in the application.
+* When searching from the input i reset the state of my filter and vice versa. 
+* I enabled search for all fields which are; Name, Status and Type.
 
 ## To Start Application:
 After installing graphql-faker globally 
